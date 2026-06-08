@@ -1,0 +1,94 @@
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+print("Addition=",(a+b))
+print("Subtraction=",(a-b))
+print("Multiplication=",(a*b))
+print("Division=",(a/b))
+print("Modulus=",(a%b))
+print("Exponentiation=",(a**b))
+
+
+# Student Marks Calculation
+name    = input("Enter student name: ")
+marks1  = float(input("Enter marks in Subject 1: "))
+marks2  = float(input("Enter marks in Subject 2: "))
+marks3  = float(input("Enter marks in Subject 3: "))
+
+total      = marks1 + marks2 + marks3
+average    = total / 3
+percentage = (total / 300) * 100
+
+print("\n--- Result ---")
+print("Student :", name)
+print("Total   :", total)
+print("Average :", average)
+print("Percent :", percentage, "%")
+
+
+# Salary Calculation System
+basic  = float(input("Enter Basic Salary: "))
+hra    = basic * 0.20   # 20% HRA
+da     = basic * 0.10   # 10% DA
+gross  = basic + hra + da
+
+pf     = basic * 0.12   # 12% PF deduction
+tax    = gross * 0.05   # 5% tax
+deduction = pf + tax
+
+net    = gross - deduction
+
+print("\nGross Salary :", gross)
+print("Deductions   :", deduction)
+print("Net Salary   :", net)
+
+
+# Shopping Bill Calculator
+p1   = float(input("Price of item 1: "))
+q1   = int(input("Quantity of item 1: "))
+
+p2   = float(input("Price of item 2: "))
+q2   = int(input("Quantity of item 2: "))
+
+p3   = float(input("Price of item 3: "))
+q3   = int(input("Quantity of item 3: "))
+
+total = (p1 * q1) + (p2 * q2) + (p3 * q3)
+discount = total * 0.05   # 5% discount
+bill  = total - discount
+
+print("\nSubtotal :", total)
+print("Discount :", discount)
+print("Net Bill :", bill)
+
+
+# Electricity Bill Calculation
+units = int(input("Enter units consumed: "))
+
+# Slab rates
+if units <= 100:
+    bill = units * 3.50
+elif units <= 300:
+    bill = 100 * 3.50 + (units - 100) * 5.00
+else:
+    bill = 100 * 3.50 + 200 * 5.00 + (units - 300) * 7.00
+
+tax   = bill * 0.10
+total = bill + tax
+
+print("Units    :", units)
+print("Charges  :", bill)
+print("Tax (10%):", tax)
+print("Total    :", total)
+
+
+# Loan Eligibility Checker
+age    = int(input("Enter age: "))
+salary = float(input("Enter monthly salary: "))
+score  = int(input("Enter credit score: "))
+
+if age >= 21 and salary >= 25000 and score >= 700:
+    print("✅ Eligible for loan")
+elif age >= 21 and salary >= 15000:
+    print("⚠️  Eligible for small loan only")
+else:
+    print(" Not eligible for loan")
